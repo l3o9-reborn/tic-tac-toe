@@ -88,7 +88,7 @@ body{
     transition: transform 0.3s ease;
 }
 .formField input:focus{
-    border: 2px solid var(--primatyBtnColor);
+    border: 2px solid var(--primaryBtnColor);
     outline: none;
 }
 
