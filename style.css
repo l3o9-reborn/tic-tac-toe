@@ -1,0 +1,201 @@
+:root{
+    --gameFont: 'Poppins', 'Roboto';
+
+    --primaryColorX: #FF5A5F;
+    --primaryColorO: #3498DB;
+    --mainBGColor: #EAF6FF;
+    --gameGridColor: #BDC3C7;
+    --textHeadlineColor: #2C3E50;
+    --textBodyColor: #7F8C8D;
+    --primaryBtnColor:#2ECC71;
+    --hoverBtnColor: #27AE60;
+    --secondaryBtnColor: #F1C40F;
+
+    --inputFieldColor: #D5D8DC;
+    --errorMessageColor:#E74C3C;
+    --successMessageColor:#27AE60;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--gameFont);
+}
+
+.loginForm{
+    position: absolute;
+    background: rgba(50, 100, 150, 0.3);
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.hidden{
+    display: none;
+}
+
+.nameForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mainBGColor);
+    height: 50vh;
+    width: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--textHeadlineColor);
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px 10px var(--primaryColorO);
+}
+
+
+.nameForm legend{
+    color: var(--textHeadlineColor);
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px ;
+
+}
+.formField{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+
+}
+
+.formField label{
+    color: var(--textHeadlineColor);
+    font-size: 1.5rem;
+    padding-bottom: .9rem;
+}
+.formField input{
+    height: 2rem;
+    width: 20rem;
+    padding: 10px;
+    border: 2px solid var(--textHeadlineColor);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.formField input:focus{
+    border: 2px solid var(--primatyBtnColor);
+    outline: none;
+}
+
+.nameForm button{
+    background-color: var(--primaryBtnColor);
+    padding: 1rem 4rem;
+    border-radius: 8px;
+    border: 2px solid var(--textHeadlineColor);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.nameForm button:hover{
+    background-color: var(--hoverBtnColor);
+    transform: scale(1.1);
+}
+
+
+
+/* game page */
+
+.gamePage{
+    background-color: var(--mainBGColor);
+    display: flex;
+    height: 90vh;
+    width: 90vw;
+
+    padding: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+
+}
+.score{
+    color: var(--textHeadlineColor);
+    text-align: center;
+    font-size: 1rem;
+    
+}
+
+.resultBoard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--textHeadlineColor);
+    border: 8px solid yellowgreen;
+    border-radius: 8px;
+    height: 50vh;
+    width: 20vw;
+    color: white;
+
+}
+.resultBoard h1{
+
+}
+
+
+.resultBoard h1 span{
+    display: block;
+    text-align: center;
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+.reset{
+    padding: 1rem 3rem;
+    background-color: var(--secondaryBtnColor);
+    border-radius: 8px;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+.reset:hover{
+    transform: scale(1.1);
+    background-color: red;
+}
+
+.gameBoard{
+    display: grid;
+    grid: repeat(3, 2fr)/repeat(3, 2fr);
+
+    gap: .5rem;
+
+    border-radius: 8px;
+}
+
+.cell{
+    display: flex;
+    height: 20vh;
+    width: 20vw;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    background-color: var(--textHeadlineColor);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 6rem;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.cell:hover{
+    transform: scale(1.1);
+}

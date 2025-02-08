@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
+    <section class="loginForm">
+        <form action="" class="nameForm">
+            <legend>Name Fields</legend>
+            <div class="forms">
+                <div class="formField">
+                    <label for="firstName">First Player1 Name*</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="" required>
+                </div>
+                <div class="formField">
+                    <label for="secondName">First Player2 Name*</label>
+                    <input type="text" name="secondName" id="secondName" placeholder="" required>
+                </div>
+            </div>
+            <button id="submit" type="button">Start Game</button>
+        </form>
+    </section>
+    <section class="gamePage">
+        <div class="score">
+            <h1>Score Board</h1>
+            <div class="resultBoard">
+                <h1 class="score1">Name1(x): <span>0</span></h1>
+                <h1 class="score2"> Name2(O): <span>0</span></h1>
+                <button class="reset">Reset</button>
+            </div>
+        </div>
+        <div class="gameBoard">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+    </section>
     
 </body>
 </html>
